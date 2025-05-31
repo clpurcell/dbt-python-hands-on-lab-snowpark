@@ -33,8 +33,7 @@ def register_udf_for_prediction(p_predictor ,p_session ,p_dbt):
 
     # The prediction udf
 
-    def predict_position(p_df: T.PandasDataFrame[int, int, int, int,
-                                        int, int, int, int, int]) -> T.PandasSeries[int]:
+    def predict_position(p_df: T.PandasDataFrame[int, int, int, int, int, int, int, int, int]) -> T.PandasSeries[int]:
         # Snowpark currently does not set the column name in the input dataframe
         # The default col names are like 0,1,2,... Hence we need to reset the column
         # names to the features that we initially used for training.
